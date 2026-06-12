@@ -6,28 +6,29 @@
 <title>Panduan Kedatangan Studi di UK - IKANAS Chapter UK</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
     --sidebar-width: 272px;
+    /* IKANAS UK palette */
     --color-bg: #ffffff;
-    --color-bg-secondary: #f7f7f5;
-    --color-bg-tertiary: #f0efec;
-    --color-text: #1a1a1a;
-    --color-text-secondary: #555555;
-    --color-text-tertiary: #999999;
-    --color-border: rgba(0,0,0,0.08);
-    --color-border-medium: rgba(0,0,0,0.12);
-    --color-accent: #1a1a1a;
-    --color-blue-bg: #e6f1fb;
-    --color-blue-text: #0c447c;
-    --color-blue-border: #b5d4f4;
-    --color-amber-bg: #faeeda;
-    --color-amber-text: #633806;
-    --color-amber-border: #fac775;
+    --color-bg-secondary: #E8F0FB;
+    --color-bg-tertiary: #d4e4f7;
+    --color-text: #111827;
+    --color-text-secondary: #374151;
+    --color-text-tertiary: #6B7280;
+    --color-border: rgba(34,86,177,0.12);
+    --color-border-medium: rgba(34,86,177,0.2);
+    --color-accent: #1A3A6B;
+    --color-blue-bg: #E8F0FB;
+    --color-blue-text: #1A3A6B;
+    --color-blue-border: #a8c4ee;
+    --color-amber-bg: #FFF8DC;
+    --color-amber-text: #7a5c00;
+    --color-amber-border: #F5C518;
     --color-green-bg: #eaf3de;
     --color-green-text: #27500a;
     --radius-sm: 6px;
@@ -63,19 +64,21 @@
   .sidebar-header {
     padding: 1.5rem 1.25rem 1.25rem;
     border-bottom: 1px solid var(--color-border);
+    background: #1A3A6B;
   }
   .sidebar-org {
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--color-text-tertiary);
+    color: rgba(255,255,255,0.5);
     margin-bottom: 4px;
   }
   .sidebar-title {
+    font-family: 'Sora', sans-serif;
     font-size: 13px;
-    font-weight: 500;
-    color: var(--color-text);
+    font-weight: 600;
+    color: #ffffff;
     line-height: 1.4;
   }
 
@@ -105,16 +108,31 @@
   .nav-item:hover { background: var(--color-bg-secondary); color: var(--color-text); }
   .nav-item.active {
     background: var(--color-bg-secondary);
-    color: var(--color-text);
-    border-left-color: var(--color-accent);
-    font-weight: 500;
+    color: #1A3A6B;
+    border-left-color: #F5C518;
+    font-weight: 600;
   }
   .nav-item i { font-size: 15px; opacity: 0.55; flex-shrink: 0; }
-  .nav-item.active i { opacity: 1; }
+  .nav-item.active i { opacity: 1; color: #1A3A6B; }
 
   .nav-sub { margin-left: 2rem; border-left: 1px solid var(--color-border); }
   .nav-sub .nav-item { font-size: 12.5px; padding: 4px 0.85rem; border-left: none; }
-  .nav-sub .nav-item.active { font-weight: 500; color: var(--color-text); border-left: none; }
+  .nav-sub .nav-item.active { font-weight: 600; color: #1A3A6B; border-left: none; }
+
+  .sidebar-footer {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .sidebar-back {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+    text-decoration: none;
+    transition: color 0.1s;
+  }
+  .sidebar-back:hover { color: #1A3A6B; }
 
   /* MAIN CONTENT */
   .main {
@@ -150,9 +168,10 @@
     margin-bottom: 0.4rem;
   }
   .page-title {
+    font-family: 'Sora', sans-serif;
     font-size: 28px;
-    font-weight: 600;
-    color: var(--color-text);
+    font-weight: 700;
+    color: #1A3A6B;
     line-height: 1.2;
     margin-bottom: 0.6rem;
   }
@@ -312,7 +331,7 @@
   }
   .link-item:last-child { border-bottom: none; padding-bottom: 0; }
   .link-item > i { font-size: 14px; color: var(--color-text-tertiary); margin-top: 2px; flex-shrink: 0; }
-  .link-item a { color: #185fa5; text-decoration: none; }
+  .link-item a { color: #2256B1; text-decoration: none; }
   .link-item a:hover { text-decoration: underline; }
   .link-desc { font-size: 12px; color: var(--color-text-tertiary); display: block; margin-top: 1px; }
 
@@ -560,6 +579,11 @@
     <a class="nav-item" onclick="show('kontak-penting')"><i class="ti ti-info-circle"></i> About</a>
 
   </nav>
+  <div class="sidebar-footer">
+    <a href="https://ikanasuk.github.io" class="sidebar-back">
+      <i class="ti ti-arrow-left"></i> Back to IKANAS UK
+    </a>
+  </div>
 </aside>
 
 <!-- MAIN -->
@@ -567,9 +591,9 @@
 
 <!-- HOME -->
 <div class="page active" id="page-home">
-  <div style="border-left:4px solid #C8FF00;padding-left:1.25rem;margin-bottom:2rem;">
-    <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#0D2144;margin-bottom:6px;opacity:0.6;">IKANAS Chapter UK</div>
-    <div style="font-size:28px;font-weight:600;color:#0D2144;line-height:1.2;margin-bottom:0.6rem;">Panduan Kedatangan Studi di UK</div>
+  <div style="border-left:4px solid #F5C518;padding-left:1.25rem;margin-bottom:2rem;">
+    <div style="font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#1A3A6B;margin-bottom:6px;opacity:0.6;">IKANAS Chapter UK</div>
+    <div style="font-family:'Sora',sans-serif;font-size:28px;font-weight:700;color:#1A3A6B;line-height:1.2;margin-bottom:0.6rem;">Panduan Kedatangan Studi di UK</div>
     <div style="font-size:14px;color:var(--color-text-secondary);line-height:1.7;margin-bottom:0.5rem;">Halo, selamat datang di laman Panduan Kedatangan Studi di UK.<br>Panduan ini disusun khusus untuk rekan-rekan alumni STAN (PKN STAN) yang akan memulai studi di Inggris. Informasi dalam laman ini bersifat dinamis dan dapat berubah sewaktu-waktu mengikuti perkembangan regulasi.</div>
     <div style="font-size:12px;color:var(--color-text-tertiary);">Latest update: 8 June 2026</div>
   </div>
@@ -595,8 +619,8 @@
         <tr><td rowspan="5" style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:600;color:var(--color-text);vertical-align:top;">Wajib</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.5;">Paspor Dinas<span class="doc-note">Hubungi Sekretariat unit eselon I masing-masing.</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);text-align:right;vertical-align:top;"><span class="badge badge-fisik">Fisik</span></td></tr>
         <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.5;">Student Visa (UK)<span class="doc-note">eVisa — tidak ada stiker di paspor.</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);text-align:right;vertical-align:top;"><span class="badge badge-evisa">eVisa</span></td></tr>
         <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.5;">Immigration Health Surcharge (IHS)<span class="doc-note">Dibayar bersamaan pengajuan visa.</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);text-align:right;vertical-align:top;"><span class="badge badge-digital">Digital</span></td></tr>
-        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.5;">Letter of Acceptance (LoA)<span class="doc-note">Surat penerimaan dari universitas. Dibutuhkan untuk pengajuan visa dan LPDP.</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);text-align:right;vertical-align:top;"><span class="badge badge-digital">Digital</span></td></tr>
-        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.5;">Confirmation of Acceptance for Studies (CAS)<span class="doc-note">Diterbitkan universitas setelah LoA. Dibutuhkan untuk pengajuan student visa.</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);text-align:right;vertical-align:top;"><span class="badge badge-digital">Digital</span></td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.5;">Letter of Acceptance (LoA)<span class="doc-note">Surat penerimaan dari universitas. Dibutuhkan untuk pengajuan visa dan LPDP.</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);text-align:right;vertical-align:top;"><span class="badge badge-fisik">Fisik</span></td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.5;">Confirmation of Acceptance for Studies (CAS)<span class="doc-note">Diterbitkan universitas setelah LoA. Dibutuhkan untuk pengajuan student visa.</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);text-align:right;vertical-align:top;"><span class="badge badge-fisik">Fisik</span></td></tr>
         <tr><td rowspan="7" style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:600;color:var(--color-text);vertical-align:top;">Pendukung</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.5;">Kartu Tanda Penduduk (KTP)</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);text-align:right;vertical-align:top;"><span class="badge badge-fisik">Fisik</span></td></tr>
         <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.5;">SIM Internasional<span class="doc-note">Jika ingin mengemudi di UK.</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);text-align:right;vertical-align:top;"><span class="badge badge-fisik">Fisik</span></td></tr>
         <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.5;">Akta kelahiran + terjemahan resmi</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);text-align:right;vertical-align:top;"><span class="badge badge-digital">Digital</span></td></tr>
@@ -614,7 +638,7 @@
   <div class="breadcrumb"><span onclick="show('home')">Beranda</span><i class="ti ti-chevron-right"></i> Pre-Departure</div>
   <div class="page-label">Pre-Departure</div>
   <div class="page-title">Visa &amp; Asuransi Kesehatan Wajib</div>
-  <div class="page-subtitle">Tiga dokumen wajib yang harus diurus sebelum berangkat ke UK. Ketiganya saling berkaitan dan umumnya diproses secara berurutan.</div>
+  <div class="page-subtitle">Dokumen keimigrasian UK yang harus diselesaikan sebelum berangkat ke UK. Jika Anda tidak membawa dependant, maka jenis visa yang diurus adalah Student Visa. Asuransi Kesehatan (IHS) bersifat wajib. Biasanya, biaya pengurusan Visa dan IHS bagi penerima beasiswa (student) akan ditanggung oleh pemberi beasiswa. Biaya Visa dan IHS dependant ditanggung oleh masing-masing keluarga.</div>
 
   <div class="section-h3">1. Student Visa</div>
   <div class="link-section" style="margin-bottom:0.75rem;">
@@ -680,13 +704,13 @@
 <div class="page" id="page-estimasi-predeparture">
   <div class="breadcrumb"><span onclick="show('home')">Beranda</span><i class="ti ti-chevron-right"></i> Pre-Departure</div>
   <div class="page-label">Pre-Departure</div>
-  <div class="page-title">Finansial Pre-Departure</div>
+  <div class="page-title">Finansial Pra Keberangkatan</div>
   <div class="page-subtitle">Persiapan finansial sebelum berangkat ke UK, mencakup rekening dan pembayaran.</div>
 
   <div class="section-h2">Rekening &amp; Pembayaran</div>
   <ul class="poin-list" style="margin-bottom:1.5rem;">
     <li><i class="ti ti-credit-card"></i>Sebagian besar transaksi di UK dilakukan dengan contactless card. Jika ada, bawa kartu debit/kredit Visa/Mastercard contactless dari Indonesia untuk memudahkan transaksi selama rekening UK masih diproses.</li>
-    <li><i class="ti ti-cash"></i>Rekomendasi uang tunai GBP yang dibawa untuk 1-2 minggu pertama: £100-£150.</li>
+    <li><i class="ti ti-cash"></i>Rekomendasi uang tunai GBP yang dibawa untuk 1-2 minggu pertama: £100-£250.</li>
     <li><i class="ti ti-building-bank"></i>Buka rekening bank atau digital bank UK segera setelah tiba (Revolut, Monzo, Lloyd's, Barclays, Santander, dll). Manfaatkan kode referral dari sesama teman untuk mendapatkan keuntungan maksimal.</li>
   </ul>
 </div>
@@ -797,18 +821,18 @@
   <div class="section-h3">Platform online</div>
   <div style="font-size:13px;color:var(--color-text-secondary);margin-bottom:0.75rem;line-height:1.6;">Kekurangan: bersaing dengan orang lain termasuk locals, biasanya landlord meminta guarantor dan biaya sewa dibayar di depan hingga 6 bulan.</div>
   <ul class="poin-list" style="margin-bottom:1rem;">
-    <li><i class="ti ti-external-link"></i><a href="https://rightmove.co.uk" target="_blank" style="color:#185fa5;">Rightmove.co.uk</a></li>
-    <li><i class="ti ti-external-link"></i><a href="https://zoopla.co.uk" target="_blank" style="color:#185fa5;">Zoopla.co.uk</a></li>
-    <li><i class="ti ti-external-link"></i><a href="https://spareroom.co.uk" target="_blank" style="color:#185fa5;">SpareRoom.co.uk</a></li>
-    <li><i class="ti ti-external-link"></i><a href="https://unilodgers.com" target="_blank" style="color:#185fa5;">Unilodgers.com</a> dan <a href="https://studentcom.com" target="_blank" style="color:#185fa5;">Studentcom.com</a></li>
+    <li><i class="ti ti-external-link"></i><a href="https://rightmove.co.uk" target="_blank" style="color:#2256B1;">Rightmove.co.uk</a></li>
+    <li><i class="ti ti-external-link"></i><a href="https://zoopla.co.uk" target="_blank" style="color:#2256B1;">Zoopla.co.uk</a></li>
+    <li><i class="ti ti-external-link"></i><a href="https://spareroom.co.uk" target="_blank" style="color:#2256B1;">SpareRoom.co.uk</a></li>
+    <li><i class="ti ti-external-link"></i><a href="https://unilodgers.com" target="_blank" style="color:#2256B1;">Unilodgers.com</a> dan <a href="https://studentcom.com" target="_blank" style="color:#2256B1;">Studentcom.com</a></li>
   </ul>
 
   <div class="section-h3">Agen real estate</div>
   <ul class="poin-list" style="margin-bottom:1rem;">
-    <li><i class="ti ti-external-link"></i><a href="https://foxtons.co.uk" target="_blank" style="color:#185fa5;">Foxtons</a></li>
-    <li><i class="ti ti-external-link"></i><a href="https://dexters.co.uk" target="_blank" style="color:#185fa5;">Dexters</a></li>
-    <li><i class="ti ti-external-link"></i><a href="https://knightfrank.co.uk" target="_blank" style="color:#185fa5;">Knight Frank</a></li>
-    <li><i class="ti ti-external-link"></i><a href="https://savills.co.uk" target="_blank" style="color:#185fa5;">Savills</a></li>
+    <li><i class="ti ti-external-link"></i><a href="https://foxtons.co.uk" target="_blank" style="color:#2256B1;">Foxtons</a></li>
+    <li><i class="ti ti-external-link"></i><a href="https://dexters.co.uk" target="_blank" style="color:#2256B1;">Dexters</a></li>
+    <li><i class="ti ti-external-link"></i><a href="https://knightfrank.co.uk" target="_blank" style="color:#2256B1;">Knight Frank</a></li>
+    <li><i class="ti ti-external-link"></i><a href="https://savills.co.uk" target="_blank" style="color:#2256B1;">Savills</a></li>
   </ul>
 
   <div class="section-h2">Hal-hal penting dalam menyewa hunian</div>
@@ -1110,42 +1134,42 @@
       </thead>
       <tbody>
         <tr>
-          <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.giffgaff.com" target="_blank" style="color:#185fa5;">Giffgaff</a></td>
+          <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.giffgaff.com" target="_blank" style="color:#2256B1;">Giffgaff</a></td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">O2 (MVNO)</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">£6/bln</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Rolling 30 hari</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Coverage 99% UK. No credit check, no contract. Bisa pesan SIM fisik gratis sebelum berangkat. Harga hingga £35/bln untuk unlimited data. Pemenang Mobile Network of the Year Uswitch 2025</td>
         </tr>
         <tr>
-          <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.lebara.co.uk" target="_blank" style="color:#185fa5;">Lebara</a></td>
+          <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.lebara.co.uk" target="_blank" style="color:#2256B1;">Lebara</a></td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Vodafone (MVNO)</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">£3/bln</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Rolling 30 hari / 12 bln</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Termasuk international calls ke 40+ negara termasuk Indonesia. Cocok untuk yang sering menelepon ke rumah. No credit check. Harga 12-bln tidak naik selama kontrak</td>
         </tr>
         <tr>
-          <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.voxi.co.uk" target="_blank" style="color:#185fa5;">VOXI</a></td>
+          <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.voxi.co.uk" target="_blank" style="color:#2256B1;">VOXI</a></td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Vodafone (MVNO)</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">~£10/bln</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Rolling 30 hari</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Unlimited social media (Instagram, TikTok, WhatsApp, X) tidak memotong kuota data. No credit check. Cocok untuk pengguna media sosial aktif</td>
         </tr>
         <tr>
-          <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.three.co.uk" target="_blank" style="color:#185fa5;">Three</a></td>
+          <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.three.co.uk" target="_blank" style="color:#2256B1;">Three</a></td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Jaringan utama</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">~£10/bln</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Rolling / 12-24 bln</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Unlimited data tersedia mulai ~£31.50/bln. 5G coverage luas. Sejak merger dengan Vodafone (2025), coverage semakin luas. Kontrak panjang membutuhkan credit check</td>
         </tr>
         <tr>
-          <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.vodafone.co.uk" target="_blank" style="color:#185fa5;">Vodafone</a></td>
+          <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.vodafone.co.uk" target="_blank" style="color:#2256B1;">Vodafone</a></td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Jaringan utama</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">~£10/bln</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Rolling / 12-24 bln</td>
           <td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Coverage luas dan 5G tersedia. VeryMe Rewards: diskon mingguan, tiket bioskop. Kontrak panjang membutuhkan credit check. Harga bisa naik tiap tahun (April)</td>
         </tr>
         <tr>
-          <td style="padding:9px 1.25rem;font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.o2.co.uk" target="_blank" style="color:#185fa5;">O2</a></td>
+          <td style="padding:9px 1.25rem;font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.o2.co.uk" target="_blank" style="color:#2256B1;">O2</a></td>
           <td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Jaringan utama</td>
           <td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">~£10/bln</td>
           <td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Rolling / 12-24 bln</td>
@@ -1176,14 +1200,14 @@
       <div style="display:flex;align-items:flex-start;gap:10px;">
         <i class="ti ti-mouse" style="font-size:15px;color:var(--color-text-tertiary);margin-top:2px;flex-shrink:0;"></i>
         <div>
-          <a href="https://peduliwni.kemlu.go.id/beranda.html" target="_blank" style="color:#185fa5;font-weight:600;font-size:13px;">Lapor Diri di Peduli WNI — peduliwni.kemlu.go.id</a>
+          <a href="https://peduliwni.kemlu.go.id/beranda.html" target="_blank" style="color:#2256B1;font-weight:600;font-size:13px;">Lapor Diri di Peduli WNI — peduliwni.kemlu.go.id</a>
           <div style="font-size:12px;color:var(--color-text-tertiary);margin-top:2px;">Portal resmi lapor diri WNI di luar negeri</div>
         </div>
       </div>
       <div style="display:flex;align-items:flex-start;gap:10px;padding-top:0.75rem;border-top:1px solid var(--color-border);">
         <i class="ti ti-brand-youtube" style="font-size:15px;color:var(--color-text-tertiary);margin-top:2px;flex-shrink:0;"></i>
         <div>
-          <a href="https://www.youtube.com/watch?v=5kLPH7T7Ja4" target="_blank" style="color:#185fa5;font-weight:600;font-size:13px;">Video Tutorial Lapor Diri di Peduli WNI</a>
+          <a href="https://www.youtube.com/watch?v=5kLPH7T7Ja4" target="_blank" style="color:#2256B1;font-weight:600;font-size:13px;">Video Tutorial Lapor Diri di Peduli WNI</a>
           <div style="font-size:12px;color:var(--color-text-tertiary);margin-top:2px;">Panduan langkah demi langkah cara lapor diri</div>
         </div>
       </div>
@@ -1222,7 +1246,7 @@
     <div style="display:flex;align-items:flex-start;gap:10px;">
       <i class="ti ti-mouse" style="font-size:15px;color:var(--color-text-tertiary);margin-top:2px;flex-shrink:0;"></i>
       <div>
-        <a href="https://www.gov.uk/browse/housing-local-services/council-tax" target="_blank" style="color:#185fa5;font-weight:600;font-size:13px;">Council Tax — gov.uk</a>
+        <a href="https://www.gov.uk/browse/housing-local-services/council-tax" target="_blank" style="color:#2256B1;font-weight:600;font-size:13px;">Council Tax — gov.uk</a>
         <div style="font-size:12px;color:var(--color-text-tertiary);margin-top:2px;">Temukan council di wilayah Anda dan informasi lengkap council tax exemption</div>
       </div>
     </div>
@@ -1339,23 +1363,43 @@
   </ul>
 
   <div class="section-h2">Keterampilan akademik yang perlu disiapkan</div>
-  <ul class="poin-list" style="margin-bottom:0;">
-    <li><i class="ti ti-check"></i><strong>Academic writing:</strong> struktur argumen, thesis statement, paragraf yang kohesif</li>
-    <li><i class="ti ti-check"></i><strong>Critical thinking:</strong> bukan hanya merangkum, tapi mengevaluasi dan berargumen</li>
-    <li><i class="ti ti-check"></i><strong>Referencing software:</strong> pelajari Zotero atau Mendeley untuk manajemen sitasi</li>
-    <li><i class="ti ti-check"></i><strong>Note-taking:</strong> Microsoft OneNote</li>
-    <li><i class="ti ti-check"></i><strong>Presentasi dalam bahasa Inggris:</strong> latih berbicara dengan percaya diri</li>
-  </ul>
+  <div class="info-card">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr style="background:var(--color-bg-secondary);">
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:30%;">Keterampilan</th>
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:70%;">Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Academic writing</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Struktur argumen, thesis statement, dan paragraf yang kohesif</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Critical thinking</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Bukan hanya merangkum, tapi mengevaluasi dan berargumen secara kritis</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Referencing software</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Pelajari Zotero atau Mendeley untuk manajemen sitasi</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Note-taking</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Microsoft OneNote atau Notion untuk mencatat secara terstruktur</td></tr>
+        <tr><td style="padding:9px 1.25rem;font-weight:500;color:var(--color-text);vertical-align:top;">Presentasi</td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Latih berbicara dalam bahasa Inggris dengan percaya diri</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="section-h2">Tools dan teknologi akademik</div>
-  <ul class="poin-list" style="margin-bottom:0;">
-    <li><i class="ti ti-check"></i><strong>Microsoft 365 / Google Workspace</strong> — biasanya tersedia gratis via universitas</li>
-    <li><i class="ti ti-check"></i><strong>Turnitin</strong> — platform anti-plagiarisme yang sering digunakan untuk submit tugas</li>
-    <li><i class="ti ti-check"></i><strong>Moodle / Blackboard / Brightspace</strong> — learning management system (LMS) kampus</li>
-    <li><i class="ti ti-check"></i><strong>Zotero atau Mendeley</strong> — manajemen referensi dan sitasi otomatis</li>
-    <li><i class="ti ti-check"></i><strong>Grammarly atau LanguageTool</strong> — bantu cek grammar dan gaya penulisan</li>
-    <li><i class="ti ti-check"></i><strong>Notion / Obsidian</strong> — untuk organisasi catatan dan jadwal belajar</li>
-  </ul>
+  <div class="info-card">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr style="background:var(--color-bg-secondary);">
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:35%;">Tool</th>
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:65%;">Fungsi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Microsoft 365 / Google Workspace</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Biasanya tersedia gratis via universitas</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Turnitin</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Platform anti-plagiarisme yang sering digunakan untuk submit tugas</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Moodle / Blackboard / Brightspace</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Learning Management System (LMS) kampus</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Zotero / Mendeley</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Manajemen referensi dan sitasi otomatis</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Grammarly / LanguageTool</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Bantu cek grammar dan gaya penulisan</td></tr>
+        <tr><td style="padding:9px 1.25rem;font-weight:500;color:var(--color-text);vertical-align:top;">Notion / Obsidian</td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Organisasi catatan dan jadwal belajar</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="section-h2">Kesehatan akademik dan work-life balance</div>
   <ul class="poin-list" style="margin-bottom:0;">
@@ -1381,7 +1425,7 @@
     <li><i class="ti ti-check"></i><span>Assessment umumnya berbasis <strong>essay dan dissertation</strong>, meski beberapa program masih menyelenggarakan ujian tulis klasik di kelas.</span></li>
     <li><i class="ti ti-check"></i><span><strong>Critical thinking</strong> sangat ditekankan. Mahasiswa diharapkan mempertanyakan dan mengevaluasi literatur, bukan sekadar menyetujui.</span></li>
     <li><i class="ti ti-check"></i><span>Academic writing style UK lebih analitis dan argument-driven, dengan referencing yang ketat (Harvard, APA, dll).</span></li>
-    <li><i class="ti ti-check"></i><span><strong>Plagiarism sangat serius.</strong></span></li>
+    <li><i class="ti ti-check"></i><span><strong>Plagiarisme ditindak sangat serius.</strong> Pastikan Anda mencantumkan sumber informasi/kutipan dengan jelas pada setiap karya ilmiah.</span></li>
     <li><i class="ti ti-check"></i><span>Tidak ada absensi wajib di sebagian besar universitas. Tanggung jawab penuh ada di mahasiswa.</span></li>
   </ul>
 
@@ -1488,7 +1532,7 @@
 
   <div class="section-h2">Cara mendaftar</div>
   <ul class="poin-list" style="margin-bottom:1.5rem;">
-    <li><i class="ti ti-check"></i>Cari GP terdekat dari tempat tinggal melalui <a href="https://www.nhs.uk/service-search/find-a-gp" target="_blank" style="color:#185fa5;">nhs.uk/service-search</a></li>
+    <li><i class="ti ti-check"></i>Cari GP terdekat dari tempat tinggal melalui <a href="https://www.nhs.uk/service-search/find-a-gp" target="_blank" style="color:#2256B1;">nhs.uk/service-search</a></li>
     <li><i class="ti ti-check"></i>Daftar secara online atau langsung datang ke klinik</li>
     <li><i class="ti ti-check"></i>Dokumen yang biasanya dibutuhkan: paspor dan bukti alamat</li>
   </ul>
@@ -1506,7 +1550,7 @@
   <div class="section-h2">Dentist</div>
   <ul class="poin-list" style="margin-bottom:0;">
     <li><i class="ti ti-check"></i>Tidak semua dentist di UK menerima pasien NHS. Beberapa hanya menerima private</li>
-    <li><i class="ti ti-check"></i>Cek ketersediaan NHS dentist di <a href="https://www.nhs.uk/service-search/find-a-dentist" target="_blank" style="color:#185fa5;">nhs.uk</a> sebelum mendaftar</li>
+    <li><i class="ti ti-check"></i>Cek ketersediaan NHS dentist di <a href="https://www.nhs.uk/service-search/find-a-dentist" target="_blank" style="color:#2256B1;">nhs.uk</a> sebelum mendaftar</li>
     <li><i class="ti ti-check"></i>Perawatan gigi di NHS lebih terjangkau dibanding private, tapi antrian bisa panjang</li>
     <li><i class="ti ti-check"></i>Anak di bawah 18 tahun: perawatan gigi gratis</li>
   </ul>
@@ -1634,42 +1678,94 @@
   <div class="page-subtitle">Panduan belanja hemat untuk kebutuhan sehari-hari di UK.</div>
 
   <div class="section-h2">Groceries</div>
-  <ul class="poin-list" style="margin-bottom:1rem;">
-    <li><i class="ti ti-check"></i><a href="https://www.tesco.com" target="_blank" style="color:#185fa5;font-weight:500;">Tesco</a> — kartu member: <a href="https://www.tesco.com/clubcard/clubcard" target="_blank" style="color:#185fa5;">Clubcard</a>. Akses harga Clubcard Prices yang lebih murah di ribuan produk</li>
-    <li><i class="ti ti-check"></i><a href="https://www.sainsburys.co.uk" target="_blank" style="color:#185fa5;font-weight:500;">Sainsbury's</a> — kartu member: <a href="https://www.sainsburys.co.uk/gol-ui/nectar" target="_blank" style="color:#185fa5;">Nectar Card</a>. Akses Nectar Prices dan kumpulkan poin yang bisa ditukar diskon</li>
-    <li><i class="ti ti-check"></i><a href="https://www.lidl.co.uk" target="_blank" style="color:#185fa5;font-weight:500;">Lidl</a> — kartu member: <a href="https://www.lidl.co.uk/c/lidl-plus-app/s10026232" target="_blank" style="color:#185fa5;">Lidl Plus</a> (via app). Kupon diskon 20-30% untuk produk pilihan setiap minggu</li>
-    <li><i class="ti ti-check"></i><a href="https://www.asda.com" target="_blank" style="color:#185fa5;font-weight:500;">ASDA</a> — kartu member: <a href="https://www.asda.com/rewards" target="_blank" style="color:#185fa5;">ASDA Rewards</a> (via app). Cashback ke dalam Cashpot yang bisa ditukar voucher</li>
-    <li><i class="ti ti-check"></i><a href="https://www.aldi.co.uk" target="_blank" style="color:#185fa5;font-weight:500;">Aldi</a> — tidak ada kartu member, tapi harga dasarnya termasuk yang paling murah di UK</li>
-    <li><i class="ti ti-check"></i><a href="https://www.morrisons.com" target="_blank" style="color:#185fa5;font-weight:500;">Morrisons</a> — kartu member: <a href="https://my.morrisons.com/more-card/" target="_blank" style="color:#185fa5;">More Card</a>. Member prices dan poin yang bisa ditukar voucher</li>
-  </ul>
+  <div class="info-card">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr style="background:var(--color-bg-secondary);">
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:25%;">Supermarket</th>
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:25%;">Kartu Member</th>
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:50%;">Keuntungan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.tesco.com" target="_blank" style="color:#2256B1;">Tesco</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;"><a href="https://www.tesco.com/clubcard/clubcard" target="_blank" style="color:#2256B1;">Clubcard</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Akses Clubcard Prices yang lebih murah di ribuan produk</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.sainsburys.co.uk" target="_blank" style="color:#2256B1;">Sainsbury's</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;"><a href="https://www.sainsburys.co.uk/gol-ui/nectar" target="_blank" style="color:#2256B1;">Nectar Card</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Akses Nectar Prices dan kumpulkan poin yang bisa ditukar diskon</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.lidl.co.uk" target="_blank" style="color:#2256B1;">Lidl</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;"><a href="https://www.lidl.co.uk/c/lidl-plus-app/s10026232" target="_blank" style="color:#2256B1;">Lidl Plus</a> (app)</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Kupon diskon 20–30% untuk produk pilihan setiap minggu</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.asda.com" target="_blank" style="color:#2256B1;">ASDA</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;"><a href="https://www.asda.com/rewards" target="_blank" style="color:#2256B1;">ASDA Rewards</a> (app)</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Cashback ke Cashpot yang bisa ditukar voucher</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.aldi.co.uk" target="_blank" style="color:#2256B1;">Aldi</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Tidak ada</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Harga dasar termasuk yang paling murah di UK</td></tr>
+        <tr><td style="padding:9px 1.25rem;font-weight:500;vertical-align:top;"><a href="https://www.morrisons.com" target="_blank" style="color:#2256B1;">Morrisons</a></td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;"><a href="https://my.morrisons.com/more-card/" target="_blank" style="color:#2256B1;">More Card</a></td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Member prices dan poin yang bisa ditukar voucher</td></tr>
+      </tbody>
+    </table>
+  </div>
   <div class="box-blue"><i class="ti ti-bulb"></i>Perhatikan bagian <strong>reduced price</strong> (biasanya ada stiker kuning) di supermarket, terutama menjelang tutup toko. Produk mendekati tanggal kedaluwarsa dijual dengan diskon besar.</div>
 
   <div class="section-h2">Apotek</div>
-  <ul class="poin-list" style="margin-bottom:1rem;">
-    <li><i class="ti ti-check"></i><a href="https://www.boots.com" target="_blank" style="color:#185fa5;font-weight:500;">Boots</a> — kartu member: <a href="https://www.boots.com/advantage-card" target="_blank" style="color:#185fa5;">Boots Advantage Card</a>. 4 poin per £1, bisa ditukar diskon belanja</li>
-    <li><i class="ti ti-check"></i><a href="https://www.superdrug.com" target="_blank" style="color:#185fa5;font-weight:500;">Superdrug</a> — kartu member: <a href="https://www.superdrug.com/health-beautycard" target="_blank" style="color:#185fa5;">Health &amp; Beautycard</a></li>
-  </ul>
+  <div class="info-card">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr style="background:var(--color-bg-secondary);">
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:25%;">Apotek</th>
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:25%;">Kartu Member</th>
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:50%;">Keuntungan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.boots.com" target="_blank" style="color:#2256B1;">Boots</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;"><a href="https://www.boots.com/advantage-card" target="_blank" style="color:#2256B1;">Advantage Card</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">4 poin per £1, bisa ditukar diskon belanja</td></tr>
+        <tr><td style="padding:9px 1.25rem;font-weight:500;vertical-align:top;"><a href="https://www.superdrug.com" target="_blank" style="color:#2256B1;">Superdrug</a></td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;"><a href="https://www.superdrug.com/health-beautycard" target="_blank" style="color:#2256B1;">Health &amp; Beautycard</a></td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Poin dan penawaran eksklusif anggota</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="section-h2">Pakaian</div>
-  <ul class="poin-list" style="margin-bottom:1rem;">
-    <li><i class="ti ti-check"></i><a href="https://www.primark.com" target="_blank" style="color:#185fa5;font-weight:500;">Primark</a> — pilihan paling terjangkau, tidak ada online shopping, harus datang ke toko</li>
-    <li><i class="ti ti-check"></i><a href="https://www.uniqlo.com/uk" target="_blank" style="color:#185fa5;font-weight:500;">Uniqlo</a> — kualitas baik, harga menengah. Terutama untuk heattech dan pakaian musim dingin</li>
-    <li><i class="ti ti-check"></i>Charity shops — pilihan murah untuk pakaian second hand berkualitas. Tersebar di hampir semua kota</li>
-  </ul>
+  <div class="info-card">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr style="background:var(--color-bg-secondary);">
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:25%;">Toko</th>
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:75%;">Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.primark.com" target="_blank" style="color:#2256B1;">Primark</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Pilihan paling terjangkau. Tidak ada online shopping — harus datang ke toko</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.uniqlo.com/uk" target="_blank" style="color:#2256B1;">Uniqlo</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Kualitas baik, harga menengah. Terutama untuk heattech dan pakaian musim dingin</td></tr>
+        <tr><td style="padding:9px 1.25rem;font-weight:500;vertical-align:top;">Charity shops</td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Pilihan murah untuk pakaian second hand berkualitas. Tersebar di hampir semua kota</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="section-h2">Buku</div>
-  <ul class="poin-list" style="margin-bottom:1rem;">
-    <li><i class="ti ti-check"></i><a href="https://www.waterstones.com" target="_blank" style="color:#185fa5;font-weight:500;">Waterstones</a> — toko buku terbesar di UK</li>
-    <li><i class="ti ti-check"></i><a href="https://www.foyles.co.uk" target="_blank" style="color:#185fa5;font-weight:500;">Foyles</a> — pilihan akademik yang lengkap</li>
-    <li><i class="ti ti-check"></i>Charity shops — sering menjual buku second hand dengan harga sangat murah, termasuk buku akademik</li>
-  </ul>
+  <div class="info-card">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr style="background:var(--color-bg-secondary);">
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:25%;">Toko</th>
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:75%;">Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.waterstones.com" target="_blank" style="color:#2256B1;">Waterstones</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Toko buku terbesar di UK</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.foyles.co.uk" target="_blank" style="color:#2256B1;">Foyles</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Pilihan akademik yang lengkap</td></tr>
+        <tr><td style="padding:9px 1.25rem;font-weight:500;vertical-align:top;">Charity shops</td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Sering menjual buku second hand dengan harga sangat murah, termasuk buku akademik</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="section-h2">Online</div>
-  <ul class="poin-list" style="margin-bottom:1rem;">
-    <li><i class="ti ti-check"></i><a href="https://www.amazon.co.uk" target="_blank" style="color:#185fa5;font-weight:500;">Amazon</a> — pilihan paling lengkap, pengiriman cepat</li>
-    <li><i class="ti ti-check"></i><a href="https://www.temu.com" target="_blank" style="color:#185fa5;font-weight:500;">Temu</a> — harga sangat murah, tapi pengiriman lebih lama</li>
-    <li><i class="ti ti-check"></i><a href="https://www.vinted.co.uk" target="_blank" style="color:#185fa5;font-weight:500;">Vinted</a> — pakaian dan barang second hand dari sesama pengguna</li>
-  </ul>
+  <div class="info-card">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr style="background:var(--color-bg-secondary);">
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:25%;">Platform</th>
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:75%;">Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.amazon.co.uk" target="_blank" style="color:#2256B1;">Amazon</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Pilihan paling lengkap, pengiriman cepat</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.temu.com" target="_blank" style="color:#2256B1;">Temu</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Harga sangat murah, tapi pengiriman lebih lama</td></tr>
+        <tr><td style="padding:9px 1.25rem;font-weight:500;vertical-align:top;"><a href="https://www.vinted.co.uk" target="_blank" style="color:#2256B1;">Vinted</a></td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Pakaian dan barang second hand dari sesama pengguna</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="section-h2">Asian supermarket</div>
   <ul class="poin-list" style="margin-bottom:1rem;">
@@ -1679,16 +1775,36 @@
   </ul>
 
   <div class="section-h2">Diskon mahasiswa</div>
-  <ul class="poin-list" style="margin-bottom:1rem;">
-    <li><i class="ti ti-check"></i><a href="https://www.myunidays.com" target="_blank" style="color:#185fa5;font-weight:500;">UNiDAYS</a> — diskon mahasiswa untuk ratusan brand: fashion, teknologi, makanan, langganan digital, dan lainnya. Daftar gratis dengan email universitas</li>
-    <li><i class="ti ti-check"></i><a href="https://www.studentbeans.com" target="_blank" style="color:#185fa5;font-weight:500;">Student Beans</a> — serupa dengan UNiDAYS, menawarkan diskon eksklusif untuk mahasiswa di berbagai merchant</li>
-  </ul>
+  <div class="info-card">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr style="background:var(--color-bg-secondary);">
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:25%;">Platform</th>
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:75%;">Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.myunidays.com" target="_blank" style="color:#2256B1;">UNiDAYS</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Diskon mahasiswa untuk ratusan brand: fashion, teknologi, makanan, langganan digital, dll. Daftar gratis dengan email universitas</td></tr>
+        <tr><td style="padding:9px 1.25rem;font-weight:500;vertical-align:top;"><a href="https://www.studentbeans.com" target="_blank" style="color:#2256B1;">Student Beans</a></td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Serupa dengan UNiDAYS, menawarkan diskon eksklusif untuk mahasiswa di berbagai merchant</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="section-h2">Beli murah atau gratis</div>
-  <ul class="poin-list" style="margin-bottom:0;">
-    <li><i class="ti ti-check"></i><a href="https://www.toogoodtogo.com/en-gb" target="_blank" style="color:#185fa5;font-weight:500;">Too Good To Go</a> — beli makanan sisa dari restoran dan kafe dengan harga sangat murah menjelang tutup. Bisa hemat hingga 50-70%</li>
-    <li><i class="ti ti-check"></i><a href="https://olioapp.com" target="_blank" style="color:#185fa5;font-weight:500;">OLIO</a> — platform berbagi barang dan makanan gratis antar tetangga dan komunitas</li>
-  </ul>
+  <div class="info-card">
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr style="background:var(--color-bg-secondary);">
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:25%;">Platform</th>
+          <th style="padding:8px 1.25rem;font-size:11px;font-weight:600;color:var(--color-text-tertiary);text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--color-border);width:75%;">Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;vertical-align:top;"><a href="https://www.toogoodtogo.com/en-gb" target="_blank" style="color:#2256B1;">Too Good To Go</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Beli makanan sisa dari restoran dan kafe dengan harga sangat murah menjelang tutup. Bisa hemat hingga 50–70%</td></tr>
+        <tr><td style="padding:9px 1.25rem;font-weight:500;vertical-align:top;"><a href="https://olioapp.com" target="_blank" style="color:#2256B1;">OLIO</a></td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Platform berbagi barang dan makanan gratis antar tetangga dan komunitas</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <div class="page" id="page-keuangan">
@@ -1767,7 +1883,7 @@
         <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Museum &amp; galeri</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);vertical-align:top;"><span class="badge badge-fisik" style="background:var(--color-green-bg);color:var(--color-green-text);">Gratis</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Mayoritas gratis di UK. British Museum, Natural History Museum, National Gallery, V&amp;A, Tate Modern (London), dan banyak lagi di kota lain</td></tr>
         <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Taman &amp; ruang hijau</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);vertical-align:top;"><span class="badge badge-fisik" style="background:var(--color-green-bg);color:var(--color-green-text);">Gratis</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Tersebar di seluruh kota. Cocok untuk piknik, jogging, atau bersantai</td></tr>
         <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Perpustakaan umum</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);vertical-align:top;"><span class="badge badge-fisik" style="background:var(--color-green-bg);color:var(--color-green-text);">Gratis</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Pinjam buku, akses internet, dan kadang ada acara komunitas</td></tr>
-        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Parkrun</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);vertical-align:top;"><span class="badge badge-fisik" style="background:var(--color-green-bg);color:var(--color-green-text);">Gratis</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Lari 5km setiap Sabtu pagi, ada di hampir semua kota UK. Daftar di <a href="https://www.parkrun.org.uk" target="_blank" style="color:#185fa5;">parkrun.org.uk</a></td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Parkrun</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);vertical-align:top;"><span class="badge badge-fisik" style="background:var(--color-green-bg);color:var(--color-green-text);">Gratis</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Lari 5km setiap Sabtu pagi, ada di hampir semua kota UK. Daftar di <a href="https://www.parkrun.org.uk" target="_blank" style="color:#2256B1;">parkrun.org.uk</a></td></tr>
         <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Walking tour</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);vertical-align:top;"><span class="badge badge-fisik" style="background:var(--color-green-bg);color:var(--color-green-text);">Gratis</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Tip-based, tersedia di banyak kota</td></tr>
         <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Pub</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);vertical-align:top;"><span class="badge badge-digital" style="background:var(--color-blue-bg);color:var(--color-blue-text);">Murah</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Bagian dari budaya sosial UK. Tidak harus pesan alkohol, bisa soft drink atau mocktail</td></tr>
         <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;">Theatre</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);vertical-align:top;"><span class="badge badge-digital" style="background:var(--color-blue-bg);color:var(--color-blue-text);">Murah</span></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;line-height:1.6;">Banyak teater menawarkan day tickets atau student standby dengan harga sangat murah</td></tr>
@@ -1869,10 +1985,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.samaritans.org" target="_blank" style="color:#185fa5;">Samaritans</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">116 123 (gratis)</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">24 jam, 7 hari</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Layanan listening anonim untuk siapa saja</td></tr>
-        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.mind.org.uk" target="_blank" style="color:#185fa5;">Mind Infoline</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">0300 123 3393</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Sen-Jum 9am-6pm</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Informasi dan dukungan mental health</td></tr>
-        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://giveusashout.org" target="_blank" style="color:#185fa5;">Shout</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Text SHOUT ke 85258</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">24 jam, 7 hari</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Layanan teks rahasia untuk yang tidak ingin menelepon</td></tr>
-        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.thecalmzone.net" target="_blank" style="color:#185fa5;">CALM</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">0800 58 58 58 (gratis)</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">5pm-midnight</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Untuk siapa saja yang terdampak pikiran bunuh diri</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.samaritans.org" target="_blank" style="color:#2256B1;">Samaritans</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">116 123 (gratis)</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">24 jam, 7 hari</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Layanan listening anonim untuk siapa saja</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.mind.org.uk" target="_blank" style="color:#2256B1;">Mind Infoline</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">0300 123 3393</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Sen-Jum 9am-6pm</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Informasi dan dukungan mental health</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://giveusashout.org" target="_blank" style="color:#2256B1;">Shout</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Text SHOUT ke 85258</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">24 jam, 7 hari</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Layanan teks rahasia untuk yang tidak ingin menelepon</td></tr>
+        <tr><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);font-weight:500;color:var(--color-text);vertical-align:top;"><a href="https://www.thecalmzone.net" target="_blank" style="color:#2256B1;">CALM</a></td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">0800 58 58 58 (gratis)</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">5pm-midnight</td><td style="padding:9px 1.25rem;border-bottom:1px solid var(--color-border);color:var(--color-text-secondary);vertical-align:top;">Untuk siapa saja yang terdampak pikiran bunuh diri</td></tr>
         <tr><td style="padding:9px 1.25rem;font-weight:500;color:var(--color-text);vertical-align:top;">NHS 111</td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Telepon 111, pilih opsi 2</td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">24 jam, 7 hari</td><td style="padding:9px 1.25rem;color:var(--color-text-secondary);vertical-align:top;">Dukungan mental health mendesak via NHS</td></tr>
       </tbody>
     </table>
@@ -1948,7 +2064,7 @@
       <tr><td>Alamat</td><td>30 Great Peter Street, London, SW1P 2BU, United Kingdom</td></tr>
       <tr><td>Telepon</td><td>(+44-20) 7290-9600</td></tr>
       <tr><td>Hotline darurat WNI</td><td>(+44) 7795-105477 &nbsp;&middot;&nbsp; (+44) 7425-648007</td></tr>
-      <tr><td>Email</td><td><a href="mailto:contact@indonesianembassy.org.uk" style="color:#185fa5;">contact@indonesianembassy.org.uk</a></td></tr>
+      <tr><td>Email</td><td><a href="mailto:contact@indonesianembassy.org.uk" style="color:#2256B1;">contact@indonesianembassy.org.uk</a></td></tr>
     </table>
   </div>
 </div>
